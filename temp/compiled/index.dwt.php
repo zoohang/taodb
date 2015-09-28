@@ -1,130 +1,244 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta name="Generator" content="ECSHOP v2.7.3" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="Keywords" content="<?php echo $this->_var['keywords']; ?>" />
-<meta name="Description" content="<?php echo $this->_var['description']; ?>" />
-
-<title><?php echo $this->_var['page_title']; ?></title>
-
-
-
-<link rel="shortcut icon" href="favicon.ico" />
-<link rel="icon" href="animated_favicon.gif" type="image/gif" />
-<link href="<?php echo $this->_var['ecs_css_path']; ?>" rel="stylesheet" type="text/css" />
-<link rel="alternate" type="application/rss+xml" title="RSS|<?php echo $this->_var['page_title']; ?>" href="<?php echo $this->_var['feed_url']; ?>" />
-
-<?php echo $this->smarty_insert_scripts(array('files'=>'common.js,index.js')); ?>
-</head>
-<body>
 <?php echo $this->fetch('library/page_header.lbi'); ?>
-<div class="blank"></div>
-<div class="block clearfix">
   
-  <div class="AreaL">
-    
-    <div class="box">
-     <div class="box_1">
-      <h3><span><?php echo $this->_var['lang']['shop_notice']; ?></span></h3>
-      <div class="boxCenterList RelaArticle">
-        <?php echo $this->_var['shop_notice']; ?>
-      </div>
-     </div>
-    </div>
-    <div class="blank5"></div>
-    
-  
-<?php echo $this->fetch('library/cart.lbi'); ?>
-<?php echo $this->fetch('library/category_tree.lbi'); ?>
-<?php echo $this->fetch('library/top10.lbi'); ?>
-<?php echo $this->fetch('library/promotion_info.lbi'); ?>
-<?php echo $this->fetch('library/order_query.lbi'); ?>
-<?php echo $this->fetch('library/invoice_query.lbi'); ?>
-<?php echo $this->fetch('library/vote_list.lbi'); ?>
-<?php echo $this->fetch('library/email_list.lbi'); ?>
-
-
-  </div>
-  
-  
-  <div class="AreaR">
-   
-    <div class="box clearfix">
-     <div class="box_1 clearfix">
-       <div class="f_l" id="focus">
-       <?php echo $this->fetch('library/index_ad.lbi'); ?>
-       </div>
-       
-       <div id="mallNews" class="f_r">
-        <div class="NewsTit"></div>
-        <div class="NewsList tc">
-         
-
-        <?php echo $this->fetch('library/new_articles.lbi'); ?>
+  <div class="right-side">
+    <div class="side-row">
+      <a href="javascript:;">
+        <img src="themes/my/images/index_09.png" alt="">
+        <p>购物车</p>
+      </a>
+      <div class="side-box shop-cart">
+        <div class="cart-row">
+          <p>小飞燕红油香辣豆干</p>
+          <div class="cart-row-num">
+            <span class="goods-price">¥ 2.50 ×</span>
+            <span class="goods-num">
+              <p class="num_box">
+                <a class="J_jian">-</a>
+                <label><input type="text" class="num" value="1"/></label>
+                <a class="J_jia">+</a>
+              </p> 
+            </span>
+            <a href="" class="del-goods">删除</a>
+          </div>        
         </div>
-       </div>
-       
-     </div>
-    </div>
-    <div class="blank5"></div>
-   
-   
-    <div class="clearfix">
-      
-      <?php echo $this->fetch('library/recommend_promotion.lbi'); ?>
-      
-      <div class="box f_r brandsIe6">
-       <div class="box_1 clearfix" id="brands">
-        <?php echo $this->fetch('library/brands.lbi'); ?>
-       </div>
+        <div class="cart-row">
+          <p>小飞燕红油香辣豆干</p>
+          <div class="cart-row-num">
+            <span class="goods-price">¥ 2.50 ×</span>
+            <span class="goods-num">
+              <p class="num_box">
+                <a class="J_jian">-</a>
+                <label><input type="text" class="num" value="1"/></label>
+                <a class="J_jia">+</a>
+              </p> 
+            </span>
+            <a href="" class="del-goods">删除</a>
+          </div>        
+        </div>
+        <div class="cart-row">
+          <p>小飞燕红油香辣豆干</p>
+          <div class="cart-row-num">
+            <span class="goods-price">¥ 2.50 ×</span>
+            <span class="goods-num">
+              <p class="num_box">
+                <a class="J_jian">-</a>
+                <label><input type="text" class="num" value="1"/></label>
+                <a class="J_jia">+</a>
+              </p> 
+            </span>
+            <a href="" class="del-goods">删除</a>
+          </div>        
+        </div>
+        <div class="cart-row">
+          <p>小飞燕红油香辣豆干</p>
+          <div class="cart-row-num">
+            <span class="goods-price">¥ 2.50 ×</span>
+            <span class="goods-num">
+              <p class="num_box">
+                <a class="J_jian">-</a>
+                <label><input type="text" class="num" value="1"/></label>
+                <a class="J_jia">+</a>
+              </p> 
+            </span>
+            <a href="" class="del-goods">删除</a>
+          </div>        
+        </div>
+        <div class="cart-row">
+          <p>小飞燕红油香辣豆干</p>
+          <div class="cart-row-num">
+            <span class="goods-price">¥ 2.50 ×</span>
+            <span class="goods-num">
+              <p class="num_box">
+                <a class="J_jian">-</a>
+                <label><input type="text" class="num" value="1"/></label>
+                <a class="J_jia">+</a>
+              </p> 
+            </span>
+            <a href="" class="del-goods">删除</a>
+          </div>        
+        </div>
+        <div class="cart-row">
+          <p>小飞燕红油香辣豆干</p>
+          <div class="cart-row-num">
+            <span class="goods-price">¥ 2.50 ×</span>
+            <span class="goods-num">
+              <p class="num_box">
+                <a class="J_jian">-</a>
+                <label><input type="text" class="num" value="1"/></label>
+                <a class="J_jia">+</a>
+              </p> 
+            </span>
+            <a href="" class="del-goods">删除</a>
+          </div>        
+        </div>
+        <div class="cart-row">
+          <p>小飞燕红油香辣豆干</p>
+          <div class="cart-row-num">
+            <span class="goods-price">¥ 2.50 ×</span>
+            <span class="goods-num">
+              <p class="num_box">
+                <a class="J_jian">-</a>
+                <label><input type="text" class="num" value="1"/></label>
+                <a class="J_jia">+</a>
+              </p> 
+            </span>
+            <a href="" class="del-goods">删除</a>
+          </div>        
+        </div>
+
+        <p style="text-align:right;padding:5px;">共8件商品 合计¥32.50</p>
+        <div class="shop-cart-submit">
+          <img src="themes/my/images/index_64.png" alt="">
+        </div>
       </div>
     </div>
-    <div class="blank5"></div>
-   
-<?php echo $this->fetch('library/recommend_best.lbi'); ?>
-<?php echo $this->fetch('library/recommend_new.lbi'); ?>
-<?php echo $this->fetch('library/recommend_hot.lbi'); ?>
-<?php echo $this->fetch('library/auction.lbi'); ?>
-<?php echo $this->fetch('library/group_buy.lbi'); ?>
-
+    <div class="side-row">
+      <a href="javascript:;">
+        <img src="themes/my/images/index_13.png" alt="">
+        <p>历史订单</p>
+      </a>
+      <div class="side-box history-list">
+        <div class="history-row">
+          <p class="history-time">2045.8.9</p>
+          <p>小飞燕红油香辣干<span>3.50 × 1</span></p>
+          <p>小飞燕红油香辣干<span>3.50 × 1</span></p>
+          <p>小飞燕红油香辣干<span>3.50 × 1</span></p>
+        </div>
+        <div class="history-row">
+          <p class="history-time">2045.8.9</p>
+          <p>小飞燕红油香辣干<span>3.50 × 1</span></p>
+          <p>小飞燕红油香辣干<span>3.50 × 1</span></p>
+          <p>小飞燕红油香辣干<span>3.50 × 1</span></p>
+        </div>
+        <div class="history-row">
+          <p class="history-time">2045.8.9</p>
+          <p>小飞燕红油香辣干<span>3.50 × 1</span></p>
+          <p>小飞燕红油香辣干<span>3.50 × 1</span></p>
+          <p>小飞燕红油香辣干<span>3.50 × 1</span></p>
+        </div>
+        <div class="history-row">
+          <p class="history-time">2045.8.9</p>
+          <p>小飞燕红油香辣干<span>3.50 × 1</span></p>
+          <p>小飞燕红油香辣干<span>3.50 × 1</span></p>
+          <p>小飞燕红油香辣干<span>3.50 × 1</span></p>
+        </div>
+        <div class="history-row">
+          <p class="history-time">2045.8.9</p>
+          <p>小飞燕红油香辣干<span>3.50 × 1</span></p>
+          <p>小飞燕红油香辣干<span>3.50 × 1</span></p>
+          <p>小飞燕红油香辣干<span>3.50 × 1</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="side-row">
+      <a href="javascript:;">
+        <img src="themes/my/images/index_22.png" alt="">
+        <p><?php echo $this->_var['lang']['shop_notice']; ?></p>
+      </a>
+      <div class="side-box rs-bar">
+        <h3><?php echo $this->_var['lang']['shop_notice_today']; ?>：</h3>
+        <p><?php echo $this->_var['shop_notice']; ?></p>
+      </div>
+    </div>
+    <div class="side-row">
+      <a href="javascript:;">
+        <img src="themes/my/images/index_25.png" alt="">
+        <p>建议栏</p>
+      </a>
+      <div class="side-box jianyilan">
+        <textarea name="jianyilan">
+          
+        </textarea>
+        <div class="jianyilan-btm">
+          <h3>限300字内</h3>
+          <input type="submit" value="发布">
+        </div>
+      </div>
+    </div>
+    <div class="side-row">
+      <a href="javascript:;">
+        <img src="themes/my/images/index_28.png" alt="">
+        <p>分享微信</p>
+      </a>
+      <div class="side-box share-weichat">
+        <h2>分享到微信</h2>
+        <img src="themes/my/images/index_54.png" alt="">
+        <h2>微信扫一扫</h2>
+      </div>
+    </div>
+    <div class="side-row up">
+      <a href="javascript:;" onclick="pageScroll()">
+        <img src="themes/my/images/index_03.png" alt="">
+        <p>回到顶部</p>
+      </a>
+    </div>
   </div>
   
-</div>
-<div class="blank5"></div>
 
-<div class="block">
-  <div class="box">
-   <div class="helpTitBg clearfix">
-    <?php echo $this->fetch('library/help.lbi'); ?>
-   </div>
-  </div>
-</div>
-<div class="blank"></div>
-
-
-<?php if ($this->_var['img_links'] || $this->_var['txt_links']): ?>
-<div id="bottomNav" class="box">
- <div class="box_1">
-  <div class="links clearfix">
-    <?php $_from = $this->_var['img_links']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'link');if (count($_from)):
-    foreach ($_from AS $this->_var['link']):
+    
+  <div class="main">
+    <div class="main-list">
+      <div class="list-row">
+        <?php $_from = $this->_var['goods_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'goods');$this->_foreach['goods_list'] = array('total' => count($_from), 'iteration' => 0);
+if ($this->_foreach['goods_list']['total'] > 0):
+    foreach ($_from AS $this->_var['goods']):
+        $this->_foreach['goods_list']['iteration']++;
 ?>
-    <a href="<?php echo $this->_var['link']['url']; ?>" target="_blank" title="<?php echo $this->_var['link']['name']; ?>"><img src="<?php echo $this->_var['link']['logo']; ?>" alt="<?php echo $this->_var['link']['name']; ?>" border="0" /></a>
-    <?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?>
-    <?php if ($this->_var['txt_links']): ?>
-    <?php $_from = $this->_var['txt_links']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'link');if (count($_from)):
-    foreach ($_from AS $this->_var['link']):
-?>
-    [<a href="<?php echo $this->_var['link']['url']; ?>" target="_blank" title="<?php echo $this->_var['link']['name']; ?>"><?php echo $this->_var['link']['name']; ?></a>]
-    <?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?>
-    <?php endif; ?>
-  </div>
- </div>
-</div>
-<?php endif; ?>
+        <div class="row-goods">
+          <a href="<?php echo $this->_var['goods']['url']; ?>"><img src="themes/my/images/index_71.png" alt=""></a>
+          <div class="goods-point">11积分</div>
+          <a href="<?php echo $this->_var['goods']['url']; ?>"><p><?php echo $this->_var['goods']['goods_name']; ?></p></a>
+          <div class="goods-bottom">
+            <div class="goods-price"><?php echo $this->_var['goods']['shop_price']; ?></div>
+            <div class="goods-num-update">
+              <div class="goods-num-update-input">
+                <input type="text" value="1" width="20px">
+              </div>
+              <div class="goods-num-update-updown">
+                <a href="javascript:;" class="g_jia">∧</a>
+                <a href="javascript:;" class="g_jian">∨</a>
+              </div>
+            </div>
+            <div class="add-cart">
+              <a href=""><img src="themes/my/images/index_16.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?>
+      
+      
+        <div class="index-ad">
+          <img src="themes/my/images/index_32.png" alt="">
+        </div>
+      
 
-<div class="blank"></div>
+        <div class="index-ad">
+          <img src="themes/my/images/index_32.png" alt="">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+
 <?php echo $this->fetch('library/page_footer.lbi'); ?>
-</body>
-</html>

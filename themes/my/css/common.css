@@ -67,7 +67,7 @@ li{list-style: none;}
 }
 .nav-list ul li{
 	float: left;
-	padding: 10px 15px;
+	padding: 11px 15px;
 }
 .nav-list ul li.on{
 	background-color: #AB0809;
@@ -140,19 +140,24 @@ li{list-style: none;}
 }
 .goods-bottom{
 	margin: 10px;
+	overflow: hidden;
 }
 .goods-bottom div{
 	float: left;
+	margin-top: 2px;
 }
 .goods-bottom .goods-price{
     color: #FA1010;
+    font-size: 16px;
+    text-align: center;
     font-weight: bold;
     font-family: 微软雅黑;
-    margin: 7px 5px 5px 20px;
+    margin: 10px 5px 5px 5px;
+   	width: 103px;	
 }
 .goods-num-update-input input{
 	width: 26px;
-	height: 28px;
+	height: 24px;
 	text-align: center;
   border: 1px solid #ccc;
   border-right: none;
@@ -163,15 +168,17 @@ li{list-style: none;}
 }
 .goods-num-update-updown a{
 	  float: left;
-    font-size: 12px;
+    font-size: 14px;
     border: 1px solid #ccc;
     font-family: 黑体;
+   	line-height: 12px;
 }
 .goods-bottom .add-cart img{
 	margin:5px;
 }
 .index-ad{
-	padding: 10px 0 0;
+	padding: 10px 0 0 0;
+	clear: both;
 }
 .footer{
 	width: 100%;

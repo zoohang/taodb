@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="Keywords" content="{$keywords}" />
+  <meta name="Description" content="{$description}" />
+  <!-- TemplateBeginEditable name="doctitle" -->
+  <title>{$page_title}</title>
+  <!-- TemplateEndEditable -->
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="icon" href="animated_favicon.gif" type="image/gif" />
+  <link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+  <link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+  <link rel="stylesheet" href="themes/my/css/common.css">
+  {* 包含脚本文件 *}
+  {insert_scripts files='jquery-1.11.1.min.js,jquery.json.js'}
+  {insert_scripts files='common.js,index.js'}
+  {insert_scripts files='transport.js,utils.js'}
+  <script type="text/javascript" src="themes/my/js/jquery1.42.min.js"></script>
+</head>
+<body>
+  <!--头部开始-->
+  <div class="top">
+    <div class="top-body">
+      <div class="top-left">
+        <img src="images/index_02.png" alt="">
+      </div>
+      <div class="top-right">
+        <script type="text/javascript">
+        var process_request = "{$lang.process_request}";
+        </script>
+        <font id="ECS_MEMBERZONE">{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font>
+        <div class="top-right-search">
+          <script type="text/javascript">
+          {literal}
+          <!--
+          function checkSearchForm()
+          {
+              if(document.getElementById('keyword').value)
+              {
+                  return true;
+              }
+              else
+              {
+                  alert("{$lang.no_keywords}");
+                  return false;
+              }
+          }
+          -->
+          {/literal}
+          </script>
+          <form id="search-form" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" >
+            <input name="keywords" type="text" id="keyword" value="{$search_keywords|escape}"/>
+            <img src="./images/index_53.png" alt="" onclick="getElementById('search-form').submit();">
+            <input type="submit" value="search" style="display:none;">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="nav-col">
+      <div class="nav-list">
+        <ul>
+        <!--{if $navigator_list.middle}-->
+          <li {if $navigator_list.config.index eq 1} class="on"{/if}><a href="./">{$lang.home}</a></li>
+          <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+          <li><a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if} {if $nav.active eq 1} class="on"{/if}>{$nav.name}</a></li>
+          <!--{/foreach}-->
+        <!--{/if}-->
+        </ul>
+      </div>
+      <div class="nav-order">
+        <span><a href="">推荐∨</a></span>
+        <span><a href="">价格∧</a></span>
+        <span><a href="">销量∨</a></span>
+      </div>
+    </div>
+  </div>
+  <!--头部结束-->

@@ -2779,4 +2779,36 @@ if (!function_exists('array_combine')) {
     }
 }
 
+/**
+ * 调用发货单查询
+ *
+ * @access  private
+ * @return  array
+ */
+function index_get_invoice_query()
+{
+    $sql = 'SELECT o.order_sn, o.invoice_no, s.shipping_code FROM ' . $GLOBALS['ecs']->table('order_info') . ' AS o' .
+            ' LEFT JOIN ' . $GLOBALS['ecs']->table('shipping') . ' AS s ON s.shipping_id = o.shipping_id' .
+            " WHERE invoice_no > '' AND shipping_status = " . SS_SHIPPED .
+            ' ORDER BY shipping_time DESC LIMIT 10';
+    $all = $GLOBALS['db']->getAll($sql);
+
+    foreach ($all AS $key => $row)
+    {
+        $plugin = ROOT_PATH . 'includes/modules/shipping/' . $row['shipping_code'] . '.php';
+
+        if (file_exists($plugin))
+        {
+            include_once($plugin);
+
+            $shipping = new $row['shipping_code'];
+            $all[$key]['invoice_no'] = $shipping->query((string)$row['invoice_no']);
+        }
+    }
+
+    clearstatcache();
+
+    return $all;
+}
+
 ?>

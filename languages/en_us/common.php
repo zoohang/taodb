@@ -45,6 +45,8 @@ $_LANG['hot_goods'] = 'Hot';
 $_LANG['view_cart'] = 'Cart';
 $_LANG['catalog'] = 'Categories';
 $_LANG['regist_login'] = 'Register/Login';
+$_LANG['register'] = 'Register';
+$_LANG['login'] = 'Login';
 $_LANG['profile'] = 'Profile';
 $_LANG['query_info'] = 'Run %d queries, spents %f seconds, %d people online';
 $_LANG['gzip_enabled'] = '，Gzip enabled';
@@ -357,6 +359,7 @@ $_LANG['pay_fail'] = 'Paid failed, return and try it again!';
 /* 文章部分 */
 $_LANG['new_article'] = 'New article';
 $_LANG['shop_notice'] = 'Shop notice';
+$_LANG['shop_notice_today'] = 'Today notice';
 $_LANG['order_already_received'] = 'The order is already received, thanks for your trade, hope you will come again.';
 $_LANG['order_invalid'] = 'Please enter a valid order.';
 $_LANG['act_ok'] = 'Thanks for your notification, thanks for your trade, hope you will come again.';
