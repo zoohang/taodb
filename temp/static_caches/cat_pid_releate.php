@@ -2,6 +2,32 @@
 $data = array (
   0 => 
   array (
+    'cat_id' => '16',
+    'cat_name' => '宝宝奶粉区',
+    'measure_unit' => '',
+    'parent_id' => '0',
+    'is_show' => '1',
+    'show_in_nav' => '1',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '7',
+    'goods_num' => 0,
+  ),
+  1 => 
+  array (
+    'cat_id' => '30',
+    'cat_name' => '速冻食品',
+    'measure_unit' => '',
+    'parent_id' => '0',
+    'is_show' => '1',
+    'show_in_nav' => '1',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+  ),
+  2 => 
+  array (
     'cat_id' => '31',
     'cat_name' => '辅食调味',
     'measure_unit' => '',
@@ -13,7 +39,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  1 => 
+  3 => 
   array (
     'cat_id' => '6',
     'cat_name' => '零食饮料',
@@ -26,7 +52,7 @@ $data = array (
     'has_children' => '4',
     'goods_num' => 0,
   ),
-  2 => 
+  4 => 
   array (
     'cat_id' => '24',
     'cat_name' => '辅食专区',
@@ -39,7 +65,7 @@ $data = array (
     'has_children' => '4',
     'goods_num' => 0,
   ),
-  3 => 
+  5 => 
   array (
     'cat_id' => '32',
     'cat_name' => '生活用品',
@@ -52,7 +78,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  4 => 
+  6 => 
   array (
     'cat_id' => '1',
     'cat_name' => '蔬菜水果',
@@ -63,32 +89,6 @@ $data = array (
     'grade' => '5',
     'sort_order' => '50',
     'has_children' => '4',
-    'goods_num' => 0,
-  ),
-  5 => 
-  array (
-    'cat_id' => '16',
-    'cat_name' => '宝宝奶粉区',
-    'measure_unit' => '',
-    'parent_id' => '0',
-    'is_show' => '1',
-    'show_in_nav' => '1',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '7',
-    'goods_num' => 0,
-  ),
-  6 => 
-  array (
-    'cat_id' => '30',
-    'cat_name' => '速冻食品',
-    'measure_unit' => '',
-    'parent_id' => '0',
-    'is_show' => '1',
-    'show_in_nav' => '1',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
     'goods_num' => 0,
   ),
   7 => 
@@ -145,6 +145,19 @@ $data = array (
   ),
   11 => 
   array (
+    'cat_id' => '8',
+    'cat_name' => '耳机',
+    'measure_unit' => '',
+    'parent_id' => '6',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '3',
+  ),
+  12 => 
+  array (
     'cat_id' => '9',
     'cat_name' => '电池',
     'measure_unit' => '',
@@ -156,7 +169,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  12 => 
+  13 => 
   array (
     'cat_id' => '11',
     'cat_name' => '读卡器和内存卡',
@@ -169,7 +182,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '2',
   ),
-  13 => 
+  14 => 
   array (
     'cat_id' => '7',
     'cat_name' => '充电器',
@@ -182,20 +195,20 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  14 => 
+  15 => 
   array (
-    'cat_id' => '8',
-    'cat_name' => '耳机',
-    'measure_unit' => '',
-    'parent_id' => '6',
+    'cat_id' => '17',
+    'cat_name' => '德国Hipp 喜宝',
+    'measure_unit' => '个',
+    'parent_id' => '16',
     'is_show' => '1',
     'show_in_nav' => '0',
     'grade' => '0',
     'sort_order' => '50',
     'has_children' => '0',
-    'goods_num' => '3',
+    'goods_num' => 0,
   ),
-  15 => 
+  16 => 
   array (
     'cat_id' => '23',
     'cat_name' => '宝宝腹泻奶粉',
@@ -208,7 +221,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  16 => 
+  17 => 
   array (
     'cat_id' => '20',
     'cat_name' => '德国Holle鸿乐/凯莉',
@@ -221,7 +234,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  17 => 
+  18 => 
   array (
     'cat_id' => '18',
     'cat_name' => '德国Aptamil爱他美',
@@ -234,7 +247,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  18 => 
+  19 => 
   array (
     'cat_id' => '21',
     'cat_name' => '德国Bambinchen羊奶',
@@ -247,7 +260,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  19 => 
+  20 => 
   array (
     'cat_id' => '19',
     'cat_name' => '德国Nestle雀巢BEBA',
@@ -260,7 +273,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  20 => 
+  21 => 
   array (
     'cat_id' => '22',
     'cat_name' => '德国成人奶粉',
@@ -272,19 +285,6 @@ $data = array (
     'sort_order' => '50',
     'has_children' => '0',
     'goods_num' => '2',
-  ),
-  21 => 
-  array (
-    'cat_id' => '17',
-    'cat_name' => '德国Hipp 喜宝',
-    'measure_unit' => '个',
-    'parent_id' => '16',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => 0,
   ),
   22 => 
   array (

@@ -632,7 +632,9 @@ class cls_template
                     case 'strip_tags':
                         $p = 'strip_tags(' . $p . ')';
                         break;
-
+                    case 'print_r':
+                        $p='print_r('.$p.',true)';
+                        break;       
                     default:
                         # code...
                         break;

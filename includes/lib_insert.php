@@ -89,9 +89,27 @@ function insert_history()
             $goods['goods_thumb'] = get_image_path($row['goods_id'], $row['goods_thumb'], true);
             $goods['shop_price'] = price_format($row['shop_price']);
             $goods['url'] = build_uri('goods', array('gid'=>$row['goods_id']), $row['goods_name']);
-            $str.='<ul class="clearfix"><li class="goodsimg"><a href="'.$goods['url'].'" target="_blank"><img src="'.$goods['goods_thumb'].'" alt="'.$goods['goods_name'].'" class="B_blue" /></a></li><li><a href="'.$goods['url'].'" target="_blank" title="'.$goods['goods_name'].'">'.$goods['short_name'].'</a><br />'.$GLOBALS['_LANG']['shop_price'].'<font class="f1">'.$goods['shop_price'].'</font><br /></li></ul>';
+            $str.='<div class="row-goods">
+            <a href="'.$goods['url'].'" target="_blank">
+            <img src="'.$goods['goods_thumb'].'" alt="'.$goods['goods_name'].'" />
+            </a>
+            <div class="goods-point">11积分</div>
+            <a href="'.$goods['url'].'" target="_blank" title="'.$goods['goods_name'].'">
+                <p>'.$goods['short_name'].'</p>
+            </a><div class="goods-bottom">
+            <div class="goods-price">'.$goods['shop_price'].'</div>
+            <div class="goods-num-update"><div class="goods-num-update-input">
+                <input type="text" value="1" width="20px">
+              </div><div class="goods-num-update-updown">
+                <a href="javascript:;" class="g_jia">∧</a>
+                <a href="javascript:;" class="g_jian">∨</a>
+            </div></div><div class="add-cart">
+              <a href=""><img src="themes/my/images/index_16.png" alt=""></a>
+            </div>
+          </div>
+        </div>';
         }
-        $str .= '<ul id="clear_history"><a onclick="clear_history()">' . $GLOBALS['_LANG']['clear_history'] . '</a></ul>';
+        
     }
     return $str;
 }

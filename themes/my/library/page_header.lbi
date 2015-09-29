@@ -58,7 +58,7 @@
       </div>
     </div>
   </div>
-  <div class="nav">
+  <div class="nav" id="goods_list">
     <div class="nav-col">
       <div class="nav-list">
         <ul>
@@ -71,9 +71,9 @@
         </ul>
       </div>
       <div class="nav-order">
-        <span><a href="">推荐∨</a></span>
-        <span><a href="">价格∧</a></span>
-        <span><a href="">销量∨</a></span>
+        <span><a href="">{$lang.recommend}∨</a></span>
+        <span><a href="{$script_name}.php?category={$category}&page={$pager.page}&sort=shop_price&order=<!-- {if $pager.sort == 'shop_price' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list">{$lang.price}<!-- {if $pager.sort == 'shop_price'&& $pager.order == 'DESC'} -->∨<!-- {else} -->∧<!-- {/if} --></a></span>
+        <span><a href="{$script_name}.php?category={$category}&page={$pager.page}&sort=salesnum&order=<!-- {if $pager.sort == 'salesnum' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list">{$lang.salesnum}<!-- {if $pager.sort == 'salesnum' && $pager.order == 'DESC'} -->∨<!-- {else} -->∧<!-- {/if} --></a></span>
       </div>
     </div>
   </div>

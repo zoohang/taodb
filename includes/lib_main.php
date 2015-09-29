@@ -1938,7 +1938,7 @@ function get_library_number($library, $template = null)
         }
         $lib = '/library/' . $library . '.lbi';
 
-        $num = isset($static_page_libs[$template][$lib]) ? $static_page_libs[$template][$lib] :  3;
+        $num = isset($static_page_libs[$template][$lib]) ? $static_page_libs[$template][$lib] :  5;
     }
 
     return $num;

@@ -2,10 +2,10 @@
   <!--右边悬停菜单开始-->
   <div class="right-side">
     <div class="side-row">
-      <a href="javascript:;">
+      <div class="side-body">
         <img src="./images/index_09.png" alt="">
-        <p>购物车</p>
-      </a>
+        <p>{$lang.cart}</p>
+      </div>
       <div class="side-box shop-cart">
         <div class="cart-row">
           <p>小飞燕红油香辣豆干</p>
@@ -113,10 +113,10 @@
       </div>
     </div>
     <div class="side-row">
-      <a href="javascript:;">
+      <div class="side-body">
         <img src="./images/index_13.png" alt="">
-        <p>历史订单</p>
-      </a>
+        <p>{$lang.historical order}</p>
+      </div>
       <div class="side-box history-list">
         <div class="history-row">
           <p class="history-time">2045.8.9</p>
@@ -151,20 +151,20 @@
       </div>
     </div>
     <div class="side-row">
-      <a href="javascript:;">
+      <div class="side-body">
         <img src="./images/index_22.png" alt="">
-        <p>{$lang.shop_notice}</p>
-      </a>
+        <p>{$lang.notice}</p>
+      </div>
       <div class="side-box rs-bar">
         <h3>{$lang.shop_notice_today}：</h3>
         <p>{$shop_notice}</p>
       </div>
     </div>
     <div class="side-row">
-      <a href="javascript:;">
+      <div class="side-body">
         <img src="./images/index_25.png" alt="">
-        <p>建议栏</p>
-      </a>
+        <p>{$lang.Advice}</p>
+      </div>
       <div class="side-box jianyilan">
         <textarea name="jianyilan">
           
@@ -176,10 +176,10 @@
       </div>
     </div>
     <div class="side-row">
-      <a href="javascript:;">
+      <div class="side-body">
         <img src="./images/index_28.png" alt="">
-        <p>分享微信</p>
-      </a>
+        <p>{$lang.share}</p>
+      </div>
       <div class="side-box share-weichat">
         <h2>分享到微信</h2>
         <img src="images/index_54.png" alt="">
@@ -189,7 +189,7 @@
     <div class="side-row up">
       <a href="javascript:;" onclick="pageScroll()">
         <img src="./images/index_03.png" alt="">
-        <p>回到顶部</p>
+        <p>{$lang.goto top}</p>
       </a>
     </div>
   </div>
@@ -200,6 +200,23 @@
     <div class="main-list">
       <div class="list-row">
         <!--{foreach name=goods_list from=$goods_list item=goods}-->
+        
+        <!--{if $smarty.foreach.goods_list.index eq 10}-->
+        <div class="index-ad">
+          <img src="images/index_32.png" alt="">
+          <!-- TemplateBeginEditable name="广告1" -->
+<!-- TemplateEndEditable -->
+        </div>
+        <!--{/if}-->
+
+        <!--{if $smarty.foreach.goods_list.index eq 20}-->
+        <div class="index-ad">
+          <img src="images/index_32.png" alt="">
+          <!-- TemplateBeginEditable name="广告2" -->
+<!-- TemplateEndEditable -->
+        </div>
+        <!--{/if}-->
+
         <div class="row-goods">
           <a href="{$goods.url}"><img src="images/index_71.png" alt=""></a>
           <div class="goods-point">11积分</div>
@@ -220,21 +237,39 @@
             </div>
           </div>
         </div>
+
+        <!--{if $smarty.foreach.goods_list.index eq 30}-->
+        <div class="index-ad">
+          <img src="images/index_32.png" alt="">
+          <!-- TemplateBeginEditable name="广告3" -->
+<!-- TemplateEndEditable -->
+        </div>
+        <!--{/if}-->
+
         <!--{/foreach}-->
-      
-      
-        <div class="index-ad">
-          <img src="images/index_32.png" alt="">
-        </div>
-      
-
-        <div class="index-ad">
-          <img src="images/index_32.png" alt="">
-        </div>
-
       </div>
     </div>
   </div>
   <!--商品列表结束-->
+<script type="text/javascript">
+    $(window).scroll(function() {
 
+      var high = document.body.scrollTop;
+      if(high >= 100){
+        $('.nav').css({'position':'fixed','top':0,'z-index':999});
+      }else{
+        $('.nav').css({'position':'static','top':0});
+      }
+    });
+    //商品栏特效
+    $('.row-goods').hover(function() {
+      $('.row-goods').css('border','1px solid #fff');
+      $('.row-goods').children('.goods-point').hide();
+      $(this).css('border','1px solid #FA1010');
+      $(this).children('.goods-point').show();
+    },function() {
+      $('.row-goods').css('border','1px solid #fff');
+      $('.row-goods').children('.goods-point').hide();
+    });
+</script>
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->

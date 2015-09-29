@@ -43,6 +43,14 @@ $_LANG['best_goods'] = 'Best';
 $_LANG['new_goods'] = 'New';
 $_LANG['hot_goods'] = 'Hot';
 $_LANG['view_cart'] = 'Cart';
+
+$_LANG['cart'] = 'Cart';
+$_LANG['historical order'] = 'Order';
+$_LANG['notice'] = 'Notice';
+$_LANG['Advice'] = 'Advice';
+$_LANG['share'] = 'Share';
+$_LANG['goto top'] = 'Goto Top';
+
 $_LANG['catalog'] = 'Categories';
 $_LANG['regist_login'] = 'Register/Login';
 $_LANG['register'] = 'Register';
@@ -59,7 +67,7 @@ $_LANG['later_bought_amounts'] = 'bought amounts latest';
 $_LANG['bought_time'] = 'bought time';
 $_LANG['turnover'] = 'turnover';
 $_LANG['no_notes'] = 'No one bought this product';
-$_LANG['shop_price'] = 'Shop price:';
+$_LANG['shop_price'] = 'price:';
 $_LANG['market_price'] = 'Market price:';
 $_LANG['goods_brief'] = 'Goods Brief:';
 $_LANG['goods_album'] = 'Merchandise photo album';
@@ -86,8 +94,8 @@ $_LANG['ladder_price'] = 'Ladder price';
 $_LANG['shop_prices'] = 'Shop price';
 $_LANG['market_prices'] = 'Market price';
 $_LANG['deposit'] = 'Associates bail';
-$_LANG['amount'] = 'Total';
-$_LANG['number'] = 'Quantity';
+$_LANG['amount'] = 'Total：';
+$_LANG['number'] = 'Quantity：';
 $_LANG['handle'] = 'Operate';
 $_LANG['add'] = 'Add';
 $_LANG['edit'] = 'Edit';
@@ -291,6 +299,8 @@ $_LANG['select_spe'] = 'Please choose attributes of the goods';
 
 /* 购物流程中的订单部分 */
 $_LANG['price'] = 'Price';
+$_LANG['salesnum'] = 'Salenum';
+$_LANG['recommend'] = 'Recommend';
 $_LANG['name'] = 'Name';
 $_LANG['describe'] = 'Description';
 $_LANG['fee'] = 'Money';

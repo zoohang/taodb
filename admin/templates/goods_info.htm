@@ -426,7 +426,7 @@
           {if $code neq ''}
           <input type="hidden" name="extension_code" value="{$code}" />
           {/if}
-          <input type="button" value="{$lang.button_submit}" class="button" onclick="validate('{$goods.goods_id}')" />
+          <input type="submit" value="{$lang.button_submit}" class="button" onclick="validate('{$goods.goods_id}')" />
           <input type="reset" value="{$lang.button_reset}" class="button" />
         </div>
         <input type="hidden" name="act" value="{$form_act}" />

@@ -187,7 +187,7 @@ if (!$smarty->is_cached('goods.dwt', $cache_id))
             }
         }
 
-        $smarty->assign('goods',              $goods);
+        $smarty->assign('goods',              $goods);//var_dump($goods);
         $smarty->assign('goods_id',           $goods['goods_id']);
         $smarty->assign('promote_end_time',   $goods['gmt_end_time']);
         $smarty->assign('categories',         get_categories_tree($goods['cat_id']));  // 分类树
@@ -226,11 +226,16 @@ if (!$smarty->is_cached('goods.dwt', $cache_id))
         $smarty->assign('page_title',          $position['title']);                    // 页面标题
         $smarty->assign('ur_here',             $position['ur_here']);                  // 当前位置
 
-        $properties = get_goods_properties($goods_id);  // 获得商品的规格和属性
+        $properties = get_goods_properties($goods_id);                                  // 获得商品的规格和属性
 
         $smarty->assign('properties',          $properties['pro']);                              // 商品属性
         $smarty->assign('specification',       $properties['spe']);                              // 商品规格
         $smarty->assign('attribute_linked',    get_same_attribute_goods($properties));           // 相同属性的关联商品
+
+        var_dump(get_tonglei_goods($goods_id,$goods['cat_id']));
+        $smarty->assign('hot_goods',           get_recommend_goods('hot'));                     // 爆款推荐
+        //var_dump(get_recommend_goods('hot'));  
+
         $smarty->assign('related_goods',       $linked_goods);                                   // 关联商品
         $smarty->assign('goods_article_list',  get_linked_articles($goods_id));                  // 关联文章
         $smarty->assign('fittings',            get_goods_fittings(array($goods_id)));                   // 配件
@@ -283,6 +288,26 @@ $smarty->display('goods.dwt',      $cache_id);
 /*------------------------------------------------------ */
 //-- PRIVATE FUNCTION
 /*------------------------------------------------------ */
+/**
+ * 获取同类产品
+ */
+function get_tonglei_goods($goods_id,$cat_id)
+{
+    $sql = "SELECT goods_id,cat_id,goods_name,goods_thumb,shop_price 
+    FROM " . $GLOBALS['ecs']->table('goods') . " WHERE cat_id=".$cat_id." AND goods_id <> ".$goods_id . " 
+    AND is_on_sale = 1  AND is_delete = 0 LIMIT 5";
+    $res = $GLOBALS['db']->query($sql);
+    $arr = array();
+    while ($row = $GLOBALS['db']->fetchRow($res))
+    {
+        $arr[$row['goods_id']]['goods_id']     = $row['goods_id'];
+        $arr[$row['goods_id']]['goods_name']   = $row['goods_name'];
+        $arr[$row['goods_id']]['goods_thumb']  = get_image_path($row['goods_id'], $row['goods_thumb'], true);
+        $arr[$row['goods_id']]['shop_price']   = price_format($row['shop_price']);
+        $arr[$row['goods_id']]['url']          = build_uri('goods', array('gid'=>$row['goods_id']), $row['goods_name']);
+    }
+    return $arr;
+}
 
 /**
  * 获得指定商品的关联商品

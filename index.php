@@ -48,7 +48,7 @@ $default_display_type = $_CFG['show_order_type'] == '0' ? 'list' : ($_CFG['show_
 $default_sort_order_method = $_CFG['sort_order_method'] == '0' ? 'DESC' : 'ASC';
 $default_sort_order_type   = $_CFG['sort_order_type'] == '0' ? 'goods_id' : ($_CFG['sort_order_type'] == '1' ? 'shop_price' : 'last_update');
 
-$sort  = (isset($_REQUEST['sort'])  && in_array(trim(strtolower($_REQUEST['sort'])), array('goods_id', 'shop_price', 'last_update'))) ? trim($_REQUEST['sort'])  : $default_sort_order_type;
+$sort  = (isset($_REQUEST['sort'])  && in_array(trim(strtolower($_REQUEST['sort'])), array('goods_id', 'shop_price', 'last_update', 'salesnum'))) ? trim($_REQUEST['sort'])  : $default_sort_order_type;
 $order = (isset($_REQUEST['order']) && in_array(trim(strtoupper($_REQUEST['order'])), array('ASC', 'DESC')))                              ? trim($_REQUEST['order']) : $default_sort_order_method;
 $display  = (isset($_REQUEST['display']) && in_array(trim(strtolower($_REQUEST['display'])), array('list', 'grid', 'text'))) ? trim($_REQUEST['display'])  : (isset($_COOKIE['ECS']['display']) ? $_COOKIE['ECS']['display'] : $default_display_type);
 $display  = in_array($display, array('list', 'grid', 'text')) ? $display : 'text';
@@ -264,17 +264,16 @@ if (!$smarty->is_cached('index.dwt', $cache_id))
             $goodslist[] = array();
         }
     }
-    var_dump($goodslist);
+    //var_dump($goodslist);
     $smarty->assign('goods_list',       $goodslist);
     $smarty->assign('category',         $cat_id);
-    $smarty->assign('script_name', 'category');
+    $smarty->assign('script_name',      'index');
     $smarty->assign('shop_notice',     $_CFG['shop_notice']);       // 商店公告
     $smarty->assign('invoice_list',    index_get_invoice_query());  // 发货查询
 
     assign_pager('category',            $cat_id, $count, $size, $sort, $order, $page, '', $brand, $price_min, $price_max, $display, $filter_attr_str); // 分页
     assign_dynamic('category'); // 动态内容
 }
-
 $smarty->display('index.dwt', $cache_id);
 
 /*------------------------------------------------------ */

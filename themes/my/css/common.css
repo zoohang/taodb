@@ -140,24 +140,19 @@ li{list-style: none;}
 }
 .goods-bottom{
 	margin: 10px;
-	overflow: hidden;
 }
 .goods-bottom div{
 	float: left;
-	margin-top: 2px;
 }
 .goods-bottom .goods-price{
     color: #FA1010;
-    font-size: 16px;
-    text-align: center;
     font-weight: bold;
     font-family: 微软雅黑;
-    margin: 10px 5px 5px 5px;
-   	width: 103px;	
+    margin: 7px 5px 5px 20px;
 }
 .goods-num-update-input input{
 	width: 26px;
-	height: 24px;
+	height: 28px;
 	text-align: center;
   border: 1px solid #ccc;
   border-right: none;
@@ -168,17 +163,15 @@ li{list-style: none;}
 }
 .goods-num-update-updown a{
 	  float: left;
-    font-size: 14px;
+    font-size: 12px;
     border: 1px solid #ccc;
     font-family: 黑体;
-   	line-height: 12px;
 }
 .goods-bottom .add-cart img{
 	margin:5px;
 }
 .index-ad{
-	padding: 10px 0 0 0;
-	clear: both;
+	padding: 10px 0 0;
 }
 .footer{
 	width: 100%;
@@ -251,7 +244,7 @@ li{list-style: none;}
 	opacity: 0.5;
 }
 .side-row img{
-	margin: 10px 20px 5px;
+	margin: 10px 22px 5px;
 	cursor: pointer;
 }
 .side-row p{
@@ -371,15 +364,31 @@ li{list-style: none;}
 }
 
 /*goods 详情页面css*/
-
+.goods{
+	width: 100%;
+	max-width: 660px;
+	overflow: hidden;
+}
+.goods-name{
+	height: 30px;
+}
+.goods-name p{
+	font-size: 20px;
+	font-weight: bold;
+}
 .goods-info{
 	height: 525px;
 	width: 100%;
 	background-color: #fff;
 }
-.goods-info .url-route{
+#url-route{
 	width: 100%;
-
+	margin: 5px;
+}
+#url-route a{
+	font-family: 微软雅黑;
+	font-size: 13px;
+	color: #000;
 }
 .goods-info .goods-left{
 	width: 405px;
@@ -422,15 +431,76 @@ li{list-style: none;}
 	color: #dc2948;
 	font-weight: bold;
 }
+.goods-button{
+	overflow: hidden;
+	margin: 10px 0;
+}
 .goods-button div{
 	float: left;
 }
-.goods-right .goods-share{
-	
+#add-cart{
+	width: 140px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #f85103;
+	text-align: center;
+	color: #fff;
+	border-radius: 5px;
+	font-family: 黑体;
+	font-size: 20px;
+  margin: 0 5%;
 }
-.goods-right .goods-service{
-	
+#buy-now{
+	width: 140px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #fc7e18;
+	text-align: center;
+	color: #fff;
+	border-radius: 5px;
+	font-family: 黑体;
+	font-size: 20px;
+	    margin: 0 5% 0 18%;
 }
-.goods-right .goods-desc{
-	
+#collect-goods{
+	line-height: 30px;
+	font-size: 14px;
+	font-family: 微软雅黑;
+}
+.goods-share{
+	margin: 10px 0;
+}
+.goods-share p{
+	float: left;
+	height: 29px;
+	line-height: 39px;
+	font-family: 微软雅黑;
+	margin-right: 55px;
+}
+.goods-service{
+	margin: 10px 0;
+}
+.goods-service div{
+	float: left;
+	width: 25%;
+	text-align: center;
+	font-family: 黑体;
+}
+.goods-desc{
+	border: 1px solid #dddddd;
+	height: 168px;
+	overflow: auto;
+}
+.tuijianname{
+	font-family: 黑体;
+	clear: both;
+	overflow: hidden;
+	padding-top: 5px;
+}
+.dianwo{
+	  position: absolute;
+    width: 70px;
+    height: 70px;
+    z-index: 50;
+    top: 0px;
 }

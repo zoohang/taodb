@@ -63,7 +63,7 @@ echo $this->_echash . $k['name'] . '|' . serialize($k) . $this->_echash;
       </div>
     </div>
   </div>
-  <div class="nav">
+  <div class="nav" id="goods_list">
     <div class="nav-col">
       <div class="nav-list">
         <ul>
@@ -80,9 +80,9 @@ if ($this->_foreach['nav_middle_list']['total'] > 0):
         </ul>
       </div>
       <div class="nav-order">
-        <span><a href="">推荐∨</a></span>
-        <span><a href="">价格∧</a></span>
-        <span><a href="">销量∨</a></span>
+        <span><a href=""><?php echo $this->_var['lang']['recommend']; ?>∨</a></span>
+        <span><a href="<?php echo $this->_var['script_name']; ?>.php?category=<?php echo $this->_var['category']; ?>&page=<?php echo $this->_var['pager']['page']; ?>&sort=shop_price&order=<?php if ($this->_var['pager']['sort'] == 'shop_price' && $this->_var['pager']['order'] == 'DESC'): ?>ASC<?php else: ?>DESC<?php endif; ?>#goods_list"><?php echo $this->_var['lang']['price']; ?><?php if ($this->_var['pager']['sort'] == 'shop_price' && $this->_var['pager']['order'] == 'DESC'): ?>∨<?php else: ?>∧<?php endif; ?></a></span>
+        <span><a href="<?php echo $this->_var['script_name']; ?>.php?category=<?php echo $this->_var['category']; ?>&page=<?php echo $this->_var['pager']['page']; ?>&sort=salesnum&order=<?php if ($this->_var['pager']['sort'] == 'salesnum' && $this->_var['pager']['order'] == 'DESC'): ?>ASC<?php else: ?>DESC<?php endif; ?>#goods_list"><?php echo $this->_var['lang']['salesnum']; ?><?php if ($this->_var['pager']['sort'] == 'salesnum' && $this->_var['pager']['order'] == 'DESC'): ?>∨<?php else: ?>∧<?php endif; ?></a></span>
       </div>
     </div>
   </div>
