@@ -42,19 +42,4 @@ $('.side-body').hover(function() {
 			}
 			input.val(num);
 		});
-		$('.J_jia').click(function() {
-			var input = $(this).parent('.num_box').children('label').children('input');
-			var num = input.val();
-			num++;
-			input.val(num);
-		});
 
-		$('.J_jian').click(function() {
-			var input = $(this).parent('.num_box').children('label').children('input');
-			var num = input.val();
-			num--;
-			if(num < 1){
-				num = 1;
-			}
-			input.val(num);
-		});

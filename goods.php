@@ -232,7 +232,8 @@ if (!$smarty->is_cached('goods.dwt', $cache_id))
         $smarty->assign('specification',       $properties['spe']);                              // 商品规格
         $smarty->assign('attribute_linked',    get_same_attribute_goods($properties));           // 相同属性的关联商品
 
-        var_dump(get_tonglei_goods($goods_id,$goods['cat_id']));
+        //var_dump(get_tonglei_goods($goods_id,$goods['cat_id']));
+        $smarty->assign('tonglei_goods',           get_tonglei_goods($goods_id,$goods['cat_id']));     // 同类产品
         $smarty->assign('hot_goods',           get_recommend_goods('hot'));                     // 爆款推荐
         //var_dump(get_recommend_goods('hot'));  
 
@@ -295,7 +296,7 @@ function get_tonglei_goods($goods_id,$cat_id)
 {
     $sql = "SELECT goods_id,cat_id,goods_name,goods_thumb,shop_price 
     FROM " . $GLOBALS['ecs']->table('goods') . " WHERE cat_id=".$cat_id." AND goods_id <> ".$goods_id . " 
-    AND is_on_sale = 1  AND is_delete = 0 LIMIT 5";
+    AND is_on_sale = 1  AND is_delete = 0 ORDER BY goods_id DESC LIMIT 5";
     $res = $GLOBALS['db']->query($sql);
     $arr = array();
     while ($row = $GLOBALS['db']->fetchRow($res))

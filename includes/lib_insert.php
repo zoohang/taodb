@@ -91,7 +91,7 @@ function insert_history()
             $goods['url'] = build_uri('goods', array('gid'=>$row['goods_id']), $row['goods_name']);
             $str.='<div class="row-goods">
             <a href="'.$goods['url'].'" target="_blank">
-            <img src="'.$goods['goods_thumb'].'" alt="'.$goods['goods_name'].'" />
+            <img src="'.$goods['goods_thumb'].'" class="goods_list_pic" alt="'.$goods['goods_name'].'" />
             </a>
             <div class="goods-point">11积分</div>
             <a href="'.$goods['url'].'" target="_blank" title="'.$goods['goods_name'].'">

@@ -16,7 +16,6 @@
   <?php echo $this->smarty_insert_scripts(array('files'=>'jquery-1.11.1.min.js,jquery.json.js')); ?>
   <?php echo $this->smarty_insert_scripts(array('files'=>'common.js,index.js')); ?>
   <?php echo $this->smarty_insert_scripts(array('files'=>'transport.js,utils.js')); ?>
-  <script type="text/javascript" src="themes/my/js/jquery1.42.min.js"></script>
 </head>
 <body>
   

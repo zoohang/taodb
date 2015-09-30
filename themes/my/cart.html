@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/common.css">
+	<script type="text/javascript" src="js/jquery1.42.min.js"></script>
+</head>
+<body>
+	<!--头部开始-->
+	<div class="top">
+		<div class="top-body">
+			<div class="top-left">
+				<img src="images/index_02.png" alt="">
+			</div>
+			<div class="top-right">
+				<div class="top-right-login">
+					<ul class="top-login">
+						<li><a href="#">注册</a></li>
+						<li><a href="#">登陆</a></li>
+					</ul>
+				</div>
+				
+				<div class="top-right-search">
+					<form action="" id="search-form">	
+						<input type="text" name="search">
+						<img src="./images/index_53.png" alt="" onclick="getElementById('search-form').submit();">
+						<input type="submit" value="search" style="display:none;">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="nav">
+		<div class="nav-col">
+			<div class="nav-list">
+				<ul>
+					<li><a href="./">首页推荐</a></li>
+					<li><a href="./">零食饮料</a></li>
+					<li><a href="./">蔬菜水果</a></li>
+					<li><a href="./">速冻食品</a></li>
+					<li><a href="./">辅食调味</a></li>
+					<li><a href="./">生活用品</a></li>
+				</ul>
+			</div>
+			<div class="nav-order">
+				<span><a href="">推荐∨</a></span>
+				<span><a href="">推荐∧</a></span>
+				<span><a href="">推荐∨</a></span>
+			</div>
+		</div>
+	</div>
+	<!--头部结束-->
+
+
+	<!--购物流程开始-->
+	<div class="main-flow">
+		<div class="flow-list">
+
+			<!--步骤进度条开始-->
+			<div id="gouwu-step">
+				<div class="step step-1">
+					<div class="bg-line"></div>
+					<div class="bg-num">1</div>
+					<div class="bg-title">1.我的购物车</div>
+				</div>
+				<div class="step step-2">
+					<div class="bg-line"></div>
+					<div class="bg-num">2</div>
+					<div class="bg-title">2.填写核对订单信息</div>
+				</div>
+				<div class="step step-3">
+					<div class="bg-line"></div>
+					<div class="bg-num">3</div>
+					<div class="bg-title">3.成功提交订单</div>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+			<!--步骤进度条结束-->
+			
+			<!--购物车开始-->
+			<div class="flow-title">购物车</div>
+			<table>
+				<tr>
+					<th class="tab-th">图片</th>
+					<th class="tab-th tab-title">名称</th>
+					<th class="tab-th">单价</th>
+					<th class="tab-th">数量</th>
+					<th class="tab-th">小计</th>
+					<th class="tab-th tab-right">操作</th>
+				</tr>
+				<tr>
+					<td class="tab-td"><img src="images/goods_22.png" alt=""></td>
+					<td class="tab-td tab-title"><a href="">金冠园 特级鲜酱油 420ML</a></td>
+					<td class="tab-td">12.5 AED</td>
+					<td class="tab-td">2</td>
+					<td class="tab-td">25.0 AED</td>
+					<td class="tab-td tab-right"><a href="">删除</a><a href="">收藏</a></td>
+				</tr>
+				<tr>
+					<td colspan="6">货品总重量：500克 / 运费 10.00 AED</td>
+				</tr>
+			</table>
+			<div class="jiesuan">
+				<div class="jiesuan-body">
+					<div class="jiesuan-money">
+						应付金额：11.50 AED
+					</div>
+					<a href="" id="jiesuan-btn">去结算</a>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+			<!--购物车结束-->
+
+		</div>
+	</div>
+	<!--购物流程结束-->
+
+	<!--底部开始-->
+	<div class="footer">
+		<div class="foot-main">
+			<div class="foot-main-left">
+				<img src="images/index_38.png" alt="">
+				<div class="foot-tel">042211553</div>
+			</div>
+			<div class="foot-hr">
+				<img src="images/index_50.png" alt="">
+			</div>
+			<div class="foot-main-center">
+				<ul>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">配送服务</a></li>
+					<li><a href="#">售后服务</a></li>
+					<li><a href="#">购物流程</a></li>
+					<li><a href="#">关于我们</a></li>
+				</ul>
+			</div>
+			<div class="foot-main-right">
+				<img src="images/index_41.png" alt="">
+				<img src="images/index_36.png" alt="">
+			</div>
+		</div>
+	</div>
+	<!--底部结束-->
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$('.step-1 .bg-title').css('color','#7abd56');
+		$('.step-1 .bg-num, .step-1 .bg-line').css('background-color','#7abd56');
+	});
+	</script>
+</body>
+</html>

@@ -16,7 +16,6 @@
   {insert_scripts files='jquery-1.11.1.min.js,jquery.json.js'}
   {insert_scripts files='common.js,index.js'}
   {insert_scripts files='transport.js,utils.js'}
-  <script type="text/javascript" src="themes/my/js/jquery1.42.min.js"></script>
 </head>
 <body>
   <!--头部开始-->
